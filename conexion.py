@@ -13,6 +13,6 @@ with oracledb.connect(user=username, password=password, dsn=dsn) as connection:
         sql = "select sysdate from dual"
         resultado = cursor.execute(sql)
         for row in cursor.execute(sql):
-            print(row)
+            print("Fila",row,"\nCantidad de columnas",len(row))
             for column in row:
                 print(column)
